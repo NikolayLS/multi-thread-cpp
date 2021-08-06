@@ -17,14 +17,14 @@ enum ClothesState { Dirty, CleanAndWet, CleanAndDry };
 void dry(ClothesState& c)
 {
 	Test::Assert(c == ClothesState::CleanAndWet, "Err line 19");
-	//std::this_thread::sleep_for(std::chrono::seconds(1));
+	std::this_thread::sleep_for(std::chrono::seconds(1));
 	c = ClothesState::CleanAndDry;
 }
 
 void wash(ClothesState& c)
 {
 	Test::Assert(c == ClothesState::Dirty, "Err line 26");
-	//std::this_thread::sleep_for(std::chrono::seconds(1));
+	std::this_thread::sleep_for(std::chrono::seconds(1));
 	c = ClothesState::CleanAndWet;
 }
 
